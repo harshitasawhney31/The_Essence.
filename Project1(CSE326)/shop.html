@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TheESsence-shop now</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+       
+        .shop-container {
+            display: flex;
+            margin-top: 40px;
+        }
+        .sidebar {
+            width: 250px;
+            padding-right: 30px;
+        }
+        .sidebar h2 {
+            margin-bottom: 20px;
+            font-size: 1.5em;
+            color: #ff69b4;
+        }
+        .category-list {
+            list-style-type: none;
+        }
+        .category-list li {
+            margin-bottom: 10px;
+        }
+        .category-list li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .category-list li a:hover {
+            color: #ff69b4;
+        }
+        .product-grid {
+            flex: 1;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .product-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 40px;
+        }
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .product-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        .product-card p {
+            color: #666;
+            margin-bottom: 15px;
+        }
+        .product-card .price {
+            font-weight: bold;
+            color: #ff69b4;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #faa5cf;
+            color: #fdf9f9;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ff4da6;
+        }
+        
+        
+        .social-icons a {
+            color: #fff;
+            font-size: 20px;
+            margin: 0 10px;
+            text-decoration: none;
+            
+        }
+        @media (max-width: 768px) {
+            .shop-container {
+                flex-direction: column;
+            }
+            .sidebar {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="top-header">
+        <h1>Food of The Gods, Freshly Baked!</h1>
+        <p>Since 2020, we've been serving our guests the best quality treats, traditionally made and presented with care.</p>
+    </header>
+    
+        <!-- Navigation Bar -->
+        <header>
+            <nav class="navbar">
+                <ul class="nav-left">
+                    <a href="home.html" class="dropbtn">
+                        <i class="fas fa-home"></i> <!-- Home icon -->
+                      </a>
+                    <li><a href="">Order Online</a></li>
+                    <li class="dropdown">
+                        <a href="" class="dropbtn">Products</a>
+                        <div class="dropdown-content">
+                          
+                          
+                             <a href="">Cakes</a>
+    
+                            <a href="">Cupcakes</a>
+                            <a href="">Cookies</a>
+                            <a href="">Brownies</a>
+                            <a href="">Pastries</a>
+                            <a href="">Breads</a>
+                            <a href="">Gift Sets</a>
+                            </select>
+                        </div>
+                    </li>
+                    <li>
+                      <a href="aboutus.html">About us</a>
+                    </li>
+                </ul>
+    
+                <!-- Center Logo -->
+                <div class="logo">
+                    <img src="logo.png" alt="Bakery Logo">
+                </div>
+    
+                <!-- Right Section -->
+                <ul class="nav-right">
+                  <li><a href="">@the_essence25</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li>
+                        <div class="search-bar">
+                          <div class="search-container">
+                            <i class="fas fa-search search-icon"></i>
+                            <input type="text" class="search-bar" placeholder="Search items...">
+                        </div>
+                        
+                          </div>
+            
+                    </li>
+                    <li><a href="cart.html" class="cart-icon">
+                      <i class="fas fa-shopping-cart cart-icon"></i>
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+    
+   
+
+    <main class="container">
+        <div class="shop-container">
+            <aside class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li><a href="#cupcakes">Cupcakes</a></li>
+                    <li><a href="#cakes">Cakes</a></li>
+                    <li><a href="#cookies">Cookies</a></li>
+                    <li><a href="#pies">Pies</a></li>
+                    <li><a href="#pastries">Pastries</a></li>
+                    <li><a href="#breads">Breads</a></li>
+                </ul>
+            </aside>
+            <div class="product-grid">
+                </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-section">
+            <div class="footer-links">
+                <a href=""><i class="fa-solid fa-phone"></i> Contact Us</a> |
+                <a href="">Returns</a> |
+                <a href=""><i class="fa-solid fa-circle-info"></i> Help Center</a> |
+                <a href="">Terms of Service</a>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i>    the_essence25</a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i> Twitter</a>
+                <a href="#" class="social-icon"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+            <p class="link">Have a Question? <a href="contact.html">Get in Touch</a></p>
+            <p>&copy; The_Essence25. All rights reserved.</p>
+        </div>
+    </footer>
+        
+
+    <script>
+        const products = [
+            { id: 1, name: "Vanilla Cupcake", price: 50, image: "vanilla.jpg", description: "Classic vanilla cupcake with buttercream frosting" },
+            { id: 2, name: "Chocolate Cake", price: 450, image: "choclate.jpg", description: "Rich chocolate cake with ganache frosting" },
+            { id: 3, name: "Oatmeal Raisin Cookie", price: 120, image: "oat.jpg", description: "Chewy oatmeal cookie with plump raisins" },
+            { id: 4, name: "Apple Pie", price: 250, image: "apple.jpg", description: "Classic apple pie with a flaky crust" },
+            { id: 5, name: "Croissant", price: 150, image: "crroisant.jpg", description: "Buttery, flaky French pastry" },
+            { id: 6, name: "Sourdough Bread", price: 300, image: "sour.jpg", description: "Artisanal sourdough bread loaf" },
+            { id: 7, name: "Red Velvet Cupcake", price: 80, image: "red.jpg", description: "Decadent red velvet cupcake with cream cheese frosting" },
+            { id: 8, name: "Strawberry Cake", price: 400, image: "straw.jpg", description: "Light and fluffy strawberry cake with fresh strawberries" },
+            { id: 9, name: "Chocolate Chip Cookie", price: 175, image: "chocochip.jpg", description: "Classic chocolate chip cookie with semi-sweet chocolate chips" },
+            { id: 10, name: "Pecan Pie", price: 280, image: "pecan.jpg", description: "Sweet pecan pie with a buttery crust" },
+            { id: 11, name: "Pain au Chocolat", price: 280, image: "Pain au chocolat.jpg", description: "Chocolate filled croissant" },
+            { id: 12, name: "Rye Bread", price: 350, image: "rye.jpg", description: "Hearty rye bread loaf" },
+            { id: 13, name: "Lemon Cupcake", price: 75, image: "lemon.jpg", description: "Zesty lemon cupcake with lemon curd frosting" },
+            { id: 14, name: "Carrot Cake", price: 380, image: "carrot.jpg", description: "Moist carrot cake with cream cheese frosting" },
+            { id: 15, name: "Peanut Butter Cookie", price: 190, image: "peanut.jpg", description: "Classic peanut butter cookie" },
+            { id: 16, name: "Pumpkin Pie", price: 270, image: "pumpkin.jpg", description: "Spiced pumpkin pie with a flaky crust" },
+            { id: 17, name: "Macaron", price: 225, image: "macron.jpg", description: "Delicate French macaron" },
+            { id: 18, name: "Wheat Bread", price: 200, image: "wheat.jpg", description: "Soft wheat bread loaf" },
+            { id: 19, name: "Blueberry Muffin", price: 75, image: "blueberry.jpg", description: "Moist blueberry muffin" },
+            { id: 20, name: "Banana Bread", price: 450, image: "banana.jpg", description: "Sweet banana bread loaf" }
+        ];
+
+        function renderProducts() {
+            const productGrid = document.querySelector('.product-grid');
+            productGrid.innerHTML = '';
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <a href="product-details.html?id=${product.id}" class="product-image-link">
+                        <img src="${product.image}" alt="${product.name}">
+                    </a>
+                    <h3>${product.name}</h3>
+                    <p>${product.description}</p>
+                    <div class="price">Rs.${product.price.toFixed(2)}</div>
+                    <button class="btn add-to-cart" data-id="${product.id}">Add to Cart</button>
+                `;
+                productGrid.appendChild(productCard);
+            });
+        }
+
+        renderProducts();
+
+        
+
+
+        // Add smooth scrolling to category links
+        document.querySelectorAll('.category-list a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple mobile menu toggle (you would need to add a menu button in the HTML)
+        const navToggle = document.createElement('button');
+        navToggle.textContent = 'Menu';
+        navToggle.classList.add('nav-toggle');
+        document.querySelector('nav').prepend(navToggle);
+
+        navToggle.addEventListener('click', () => {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+
+        // // Simulate adding items to cart
+        // const addToCartButtons = document.querySelectorAll('.btn');
+        // addToCartButtons.forEach(button => {
+        //     button.addEventListener('click', (e) => {
+        //         e.preventDefault();
+        //         alert('Item added to cart!');
+        //     });
+        // });
+                // Update "Add to Cart" button listener
+document.querySelector('.product-grid').addEventListener('click', (e) => {
+    if (e.target.classList.contains('add-to-cart')) {
+        e.preventDefault();
+        const productId = e.target.getAttribute('data-id');
+        const product = products.find(p => p.id === parseInt(productId));
+
+        let cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.push(product);
+        localStorage.setItem("cart", JSON.stringify(cart));
+
+        alert(`${product.name} added to cart!`);
+    }
+});
+
+    </script>
+    
+</body>
+</html>

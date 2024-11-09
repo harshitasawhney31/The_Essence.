@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Reviews</title>
+    
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f8c7ca;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+       
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #0d0600;
+            margin-bottom: 20px;
+            text-align: center;
+            font-family: cc;
+        }
+
+        .reviews-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .review-card {
+            background-color: #ebd4dc;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .review-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .review-card h3 {
+            font-size: 18px;
+            color: #1f0647;
+            margin-bottom: 10px;
+        }
+
+        .review-card p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .stars {
+            color: #a68d00c0;
+            font-size: 16px;
+        }
+        /* Write a Review Section */
+        .review-form {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffe0f3;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 40px;
+            text-align: center;
+        }
+
+        .review-form h2 {
+            color: #0b0501;
+            margin-bottom: 15px;
+            font-family: c;
+        }
+
+        .review-form label {
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            color: #5d0b0b;
+            font-weight: bold;
+            font-family: cursive;
+        }
+
+        .review-form input, .review-form textarea, .review-form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            font-size: 14px;
+        }
+
+        .review-form button {
+            padding: 10px 20px;
+            background-color: #8b1371;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .review-form button:hover {
+            background-color: #a5426f;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <h1>Customer Reviews</h1>
+    
+    <div class="reviews-container">
+        <!-- Review 1 - Cake -->
+        <div class="review-card">
+            <img src="cn.jpeg" alt="Chocolate Cake">
+            <h3>Emma</h3>
+            <p>The chocolate cake is a dream come true! Rich and moist.</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Review 2 - Cake -->
+        <div class="review-card">
+            <img src="dorae.jpeg" alt="Vanilla Layer Cake">
+            <h3>James</h3>
+            <p>This cake was fantastic! Perfect for a celebration.</p>
+            <div class="stars">★★★★☆</div>
+        </div>
+
+        <!-- Review 3 - Cake -->
+        <div class="review-card">
+            <img src="pinl.jpeg" alt="Red Velvet Cake">
+            <h3>Sophia</h3>
+            <p>Red velvet cake was soft and delicious. Absolutely loved it.</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Review 4 - Cake -->
+        <div class="review-card">
+            <img src="pine.jpeg" alt="Lemon Drizzle Cake">
+            <h3>William</h3>
+            <p>Lemon drizzle cake was refreshing and perfectly tangy.</p>
+            <div class="stars">★★★★☆</div>
+        </div>
+
+        <!-- Review 5 - Cake -->
+        <div class="review-card">
+            <img src="stc.jpeg" alt="Carrot Cake">
+            <h3>Ava</h3>
+            <p>The choco strawberry cake was moist and flavorful. Highly recommended!</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Review 6 - Cake -->
+        <div class="review-card">
+            <img src="min.jpeg" alt="Cheesecake">
+            <h3>Liam</h3>
+            <p>The minnnion cake was smooth and creamy. Will order again.</p>
+            <div class="stars">★★★★★</div>
+        </div>
+
+        <!-- Review 7 - Pie -->
+        <div class="review-card">
+            <img src="pi.jpeg" alt="Apple Pie">
+            <h3>Mia</h3>
+            <p>The  pie was warm and full of flavor. A true delight!</p>
+            <div class="stars">★★★★☆</div>
+        </div>
+
+        <!-- Review 8 - Cookie -->
+        <div class="review-card">
+            <img src="chco.jpeg" alt="Chocolate Chip Cookie">
+            <h3>Noah</h3>
+            <p>The chocolate chip cookies were a crowd-pleaser. Perfect snack.</p>
+            <div class="stars">★★★★☆</div>
+        </div>
+
+        <!-- Review 9 - Cookie -->
+        <div class="review-card">
+            <img src="c.jpeg" alt="Oatmeal Raisin Cookie">
+            <h3>Olivia</h3>
+            <p>The oatmeal raisin cookies were chewy and delicious!</p>
+            <div class="stars">★★★★★</div>
+        </div>
+    </div>
+     <!-- Write a Review Section -->
+     <div class="review-form">
+        <h2>Write a Review</h2>
+        <form id="reviewForm">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="review">Your Review</label>
+            <textarea id="review" name="review" rows="4" required></textarea>
+
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating" required>
+                <option value="5">5 Stars</option>
+                <option value="4">4 Stars</option>
+                <option value="3">3 Stars</option>
+                <option value="2">2 Stars</option>
+                <option value="1">1 Star</option>
+            </select>
+
+            <label for="imageUrl">Image URL (optional)</label>
+            <input type="url" id="imageUrl" name="imageUrl" placeholder="http://example.com/image.jpg">
+
+            <button type="submit">Submit Review</button>
+        </form>
+    </div><br><br>
+    <footer> <p>&copy; The_Essence25. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>

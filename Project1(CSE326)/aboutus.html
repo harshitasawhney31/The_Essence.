@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .about-container {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            color: #f30a6f;
+        }
+
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+
+        .about-text {
+            width: 60%;
+            padding-right: 20px;
+        }
+
+        .about-text h3 {
+            color: #333;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .about-text p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .about-image {
+            width: 35%;
+            border-radius: 8px;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .mission-statement {
+            text-align: center;
+            margin-top: 40px;
+            padding: 30px;
+            background-color: #f30a6f;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .mission-statement h3 {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+
+        .mission-statement p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+
+        /* Meet Our Bakers Section */
+        .bakers-section {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background-color: #f3f3f3;
+            border-radius: 8px;
+        }
+
+        .bakers-section h2 {
+            font-size: 2.5em;
+            color: #f30a6f;
+            margin-bottom: 20px;
+        }
+
+        .bakers-content {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .baker-card {
+            width: 30%;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .baker-card img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .baker-card h4 {
+            font-size: 1.5em;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        .baker-card p {
+            color: #555;
+            font-size: 1.1em;
+            margin-top: 5px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 0.9em;
+            background-color: rgb(86, 39, 82);
+            color: white;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-left">
+                <a href="home.html" class="dropbtn">
+                    <i class="fas fa-home"></i> <!-- Home icon -->
+                </a>
+                <li><a href="">Order Online</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropbtn">Products</a>
+                    <div class="dropdown-content">
+                        <a href="">Cakes</a>
+                        <a href="">Cupcakes</a>
+                        <a href="">Cookies</a>
+                        <a href="">Brownies</a>
+                        <a href="">Pastries</a>
+                        <a href="">Breads</a>
+                        <a href="">Gift Sets</a>
+                    </div>
+                </li>
+                <li><a href="aboutus.html">About us</a></li>
+            </ul>
+
+            <!-- Center Logo -->
+            <div class="logo">
+                <img src="logo.png" alt="Bakery Logo">
+            </div>
+
+            <!-- Right Section -->
+            <ul class="nav-right">
+                <li><a href="">@the_essence25</a></li>
+                <li><a href="reviews.html">Reviews</a></li>
+                <li>
+                    <div class="search-container">
+                        <i class="fas fa-search search-icon"></i>
+                        <input type="text" class="search-bar" placeholder="Search items...">
+                    </div>
+                </li>
+                <li><a href="cart.html" class="cart-icon">
+                    <i class="fas fa-shopping-cart cart-icon"></i>
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Content -->
+    <div class="about-container">
+        <h1>About Us</h1>
+
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Our Story</h3>
+                <p>
+                    At "ESSENCE", we believe in the power of traditional baking. Since our founding in 2020, we've been dedicated to providing freshly baked treats that bring comfort, joy, and indulgence to our customers. Every item on our menu is made with the finest ingredients, ensuring the perfect balance of taste and texture in each bite.
+                </p>
+                <p>
+                    We strive to create a warm, inviting atmosphere where our guests can savor the best cakes, cupcakes, cookies, pastries, and more. Each of our baked goods is prepared with love, care, and attention to detail. We’re here to share our passion for baking with you, one delicious bite at a time.
+                </p>
+            </div>
+            <div class="about-image">
+                <img src="about.jpg" alt="Bakery Image">
+            </div>
+        </div>
+
+        <div class="mission-statement">
+            <h3>Our Mission</h3>
+            <p>
+                Our mission is simple – to make every bite a delightful experience. We want to bring the joy of freshly baked goods to every home, creating memories with each treat. Our commitment to quality, sustainability, and exceptional customer service makes us stand out as a trusted bakery for your special occasions and everyday cravings.
+            </p>
+        </div>
+    </div>
+
+    <!-- Meet Our Bakers Section -->
+    <div class="bakers-section">
+        <h2>Meet Our Bakers</h2>
+        <div class="bakers-content">
+            <div class="baker-card">
+                <img src="baker1.jpg" alt="Baker 1">
+                <h4>Simran</h4>
+                <p>Head Baker - Passionate about creating the finest pastries with the best ingredients.</p>
+            </div>
+            <div class="baker-card">
+                <img src="baker2.jpg" alt="Baker 2">
+                <h4>Anu</h4>
+                <p>Cake Specialist - A creative spirit who crafts cakes that are as beautiful as they are delicious.</p>
+            </div>
+           
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; The_Essence25. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

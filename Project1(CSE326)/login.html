@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bakery Sign Up / Sign In</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background-image: url('bgl.jpg'); /* Replace with your background image URL */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px;
+            background-color: rgba(255, 224, 236, 0.9); /* Semi-transparent background */
+            border-radius: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #fe0457;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #8f04f2;
+            margin-bottom: 20px;
+        }
+
+        .form-container {
+            background-color: #f5cfe6;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form.hidden {
+            display: none;
+        }
+
+        input {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #04634b;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        button {
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #e93a7d;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff60a2;
+        }
+
+        .error-message {
+            color: rgb(251, 9, 9);
+            font-size: 14px;
+            margin-top: -8px;
+        }
+
+        .switch-form {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        .switch-form a {
+            color: #fd0589;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .switch-form a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Essence </h1>
+        <p>Sign up or log in to enjoy exclusive deals and place orders online!</p>
+        
+        <div class="form-container">
+            <!-- Sign Up Form -->
+            <form id="signupForm" class="form" action="/signup" method="POST" onsubmit="return validateSignupForm()">
+                <h2>Sign Up</h2>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                
+                <input type="email" id="email" name="email" placeholder="Email Address" required>
+                <p class="error-message" id="emailError"></p>
+                
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <p class="error-message" id="passwordError"></p>
+                
+                <button type="submit">Sign Up</button>
+                <p class="switch-form">Already have an account? <a href="#" onclick="toggleForms()">Log In</a></p>
+            </form>
+
+            <!-- Sign In Form -->
+            <form id="signinForm" class="form hidden" action="/signin" method="POST" onsubmit="return validateSigninForm()">
+                <h2>Sign In</h2>
+                
+                <input type="email" id="signinEmail" name="email" placeholder="Email Address" required>
+                <p class="error-message" id="signinEmailError"></p>
+                
+                <input type="password" id="signinPassword" name="password" placeholder="Password" required>
+                <p class="error-message" id="signinPasswordError"></p>
+                
+                <button type="submit">Log In</button>
+                <p class="switch-form">New to Essence? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForms() {
+            const signupForm = document.getElementById('signupForm');
+            const signinForm = document.getElementById('signinForm');
+            signupForm.classList.toggle('hidden');
+            signinForm.classList.toggle('hidden');
+        }
+
+        function validateSignupForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            let isValid = true;
+
+            // Email validation
+            if (!email.includes('@')) {
+                document.getElementById('emailError').innerText = 'Email should contain an "@" symbol.';
+                isValid = false;
+            } else {
+                document.getElementById('emailError').innerText = '';
+            }
+
+            // Password validation
+            if (password.length < 6 || /[^a-zA-Z0-9]/.test(password)) {
+                document.getElementById('passwordError').innerText = 'Password must be at least 6 characters with no special symbols.';
+                isValid = false;
+            } else {
+                document.getElementById('passwordError').innerText = '';
+            }
+
+            return isValid;
+        }
+
+        function validateSigninForm() {
+            const email = document.getElementById('signinEmail').value;
+            const password = document.getElementById('signinPassword').value;
+            let isValid = true;
+
+            // Email validation
+            if (!email.includes('@')) {
+                document.getElementById('signinEmailError').innerText = 'Email should contain an "@" symbol.';
+                isValid = false;
+            } else {
+                document.getElementById('signinEmailError').innerText = '';
+            }
+
+            // Password validation
+            if (password.length < 6 || /[^a-zA-Z0-9]/.test(password)) {
+                document.getElementById('signinPasswordError').innerText = 'Password must be at least 6 characters with no special symbols.';
+                isValid = false;
+            } else {
+                document.getElementById('signinPasswordError').innerText = '';
+            }
+
+            return isValid;
+        }
+    </script>
+</body>
+</html>
